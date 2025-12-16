@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+</head>
+<body>
+<h2>Authors</h2>
+<ul>
+    {% for author in authors %}
+        <li>{{ author.first_name }} {{ author.last_name }}</li>
+    {% empty %}
+        <li>Author yo‘q</li>
+    {% endfor %}
+</ul>
+
+<h2>Books</h2>
+<ul>
+    {% for book in books %}
+        <li>{{ book.author }} - {{ book.price }} so'm</li>
+    {% empty %}
+        <li>Kitob yo‘q</li>
+    {% endfor %}
+</ul>
+
+<h2>Stores</h2>
+<ul>
+    {% for store in stores %}
+        <li>{{ store.name }} - {{ store.address }}</li>
+    {% empty %}
+        <li>Store yo‘q</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
